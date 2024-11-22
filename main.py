@@ -228,16 +228,12 @@ if selected_customer_option:
 
     explanation = explain_prediction(avg_probability, input_dict, selected_customer["Surname"])
 
-    st.markdown("---")
-
     st.subheader("Explanation of Prediction")
 
     st.markdown(explanation)
 
     email = generate_email(avg_probability, input_dict, explanation, selected_customer['Surname'])
-
-    st.markdown('---')
-
+  
     st.subheader("Personalized Email")
 
     st.markdown(email)
